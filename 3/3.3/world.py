@@ -1,0 +1,22 @@
+worldplace = ["shenzhen","beijing","amarican","riben","xiaweiyi"]
+print(worldplace)
+print("Here is sorted list")
+print(sorted(worldplace))
+print("Here is original list")
+print(worldplace)
+
+print(sorted(worldplace,reverse= True))
+print(worldplace)
+#fanzhuan
+print("Here is reverse method")
+worldplace.reverse()
+print(worldplace)
+print("Here is reverse again")
+worldplace.reverse()
+print(worldplace)
+print("Here is use sort")
+worldplace.sort()
+print(worldplace)
+print("Here is use sort reverse word ")
+worldplace.sort(reverse = True)
+print(worldplace)
