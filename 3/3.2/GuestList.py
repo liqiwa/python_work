@@ -14,6 +14,7 @@ guestlist.insert(3,"shimite")
 print(guestlist)
 guestlist.append("zak")
 print(guestlist)
+print(len(guestlist))
 print(guestlist[0] +" "+guestlist[1]+" "+guestlist[2]+" "+guestlist[3]+ "get one time")
 #reduce
 print("I`m so sorry ,i only invita two Guest")
