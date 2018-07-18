@@ -8,4 +8,6 @@ print("Sarah`s favorite_language is "+str(favorite_languages['sarah'].title())+'
 people = {'name':'mm','xing':'he','age':'30','city':'sjz'}
 print(people)
 
-words = {'liebiao':'liebiao,yuansu jihe','yuanzu':'bukebian xulie',''}
+words = {'liebiao':'liebiao,yuansu jihe','yuanzu':'bukebian xulie','zidian':'jianzhidui'}
+for k,v in words.items():
+	pass
