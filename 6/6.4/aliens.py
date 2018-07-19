@@ -14,3 +14,4 @@ for alien_number in range(30):
 for alien in aliens[:5]:
   print(str(alien) +" xin laide ")
 
+print("Total number of aliens :"+str(len(aliens)))
