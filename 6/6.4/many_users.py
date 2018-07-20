@@ -17,3 +17,5 @@ for username,user_info in users.items():
     location = user_info['location']
     print("\tFull_name:"+full_name.title())
     print("\tLocation:"+location.title())
+
+    
