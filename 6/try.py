@@ -53,7 +53,10 @@ cities = {
 	'tokyo':{'country':'japan','population':'1.27-million','fact':'dongjingdaxue'}
 }
 for city,infos in cities.items():
-	print(city)
-	print(infos['country']+"  "+infos['population']+"  "+infos['fact'])
+	##print(city)
+	if city == 'china':	
+		print(city)
+	else:
+	  print(infos['country']+"  "+infos['population']+"  "+infos['fact'])
 
 
