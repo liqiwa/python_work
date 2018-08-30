@@ -1,3 +1,4 @@
+from 9-8practice import Priveleges
 class User():
 	"""存储用户信息"""
 	def __init__(self,first_name,last_name):
