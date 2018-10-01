@@ -39,6 +39,6 @@ class Privileges():
 
 special_user= Admin('he','mm')
 special_user.privileges.show_privileges()
-special_user.describe_user()
+#special_user.describe_user()
 
 
