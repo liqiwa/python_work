@@ -5,7 +5,7 @@ class Topic(models.Model):
 	"""docstring for Topic"""
 	text = models.CharField(max_length = 200)
 	date_added = models.DateTimeField(auto_now_add = True)
-	def _str_(self):
+	def __str__(self):
 		"""返回模型的字符串表示"""
 		return self.text
 		 
@@ -16,6 +16,10 @@ class Entry(models.Model):
 			date_added = models.DateTimeField(auto_now_add = True)
 			class Meta:
 				verbose_name_plural = 'entries'
-			def _str_(self):
+			def __str__(self):
 				"""返回模型的字符串表示"""
-				return self.text[:50]+"..."
+				if len(self.text) > 50:
+					return self.text[:50]+"..."
+				else:
+					return self.text[:]
+				
