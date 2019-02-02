@@ -1,0 +1,17 @@
+{% extends 'blogs/base.html' %}
+{% block content %}
+<p>Title: {{ title }}</p>
+<p>BlogPost:</p>
+<ul>
+	{% for blogpost in blogposts %}
+	<li>
+		<p>{{ blogpost.date_added|date:'M d,Y H:i' }}</p>
+		<p>{{ blogpost.text|linebreaks }}</p>
+	</li>
+	{% empty %}
+	<li>
+		这个主题下面一无所有。。。
+	</li>
+	{% endfor %}
+</ul>
+{% endblock content %}
