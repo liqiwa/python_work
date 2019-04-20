@@ -1,4 +1,4 @@
-user:dmin1234
+user:admin1234
 pw:admin12345678
 user:liqiwaLiqiwa
 pw:youyigeguNiang

@@ -1,12 +1,21 @@
 {% extends "blogs/base.html" %}
+{% block header %}
+<h1>Titles</h1>
+{% endblock header%}
 {% block content %}
 <p>Titles</p>
 <ul>
 	{% for title in titles %}
-	<li><a href="{%url 'blogs:title' title.id %}">{{ title }}</a></li>
+	<li>
+		<h3>
+		<a href="{%url 'blogs:title' title.id %}">{{ title }}</a>
+		</h3>
+	</li>
 	{% empty %}}
 	<li>NO title have been added yet. </li>
 	{% endfor %}
 </ul>
-<a href="{% url 'blogs:new_title' %}">Add a new topic:</a>
+<h3>
+	<a href="{% url 'blogs:new_title' %}">Add a new title:</a>
+</h3>
 {% endblock content%}

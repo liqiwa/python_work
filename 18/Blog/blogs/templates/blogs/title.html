@@ -1,21 +1,24 @@
 {% extends 'blogs/base.html' %}
-{% block content %}
-<p>Title: {{ title }}</p>
-<p>BlogPost:</p>
+{% block header %}
+<h2>{{ title }}</h2>
+{% endblock header %}
+{% block content %}	
 <p><a href="{% url 'blogs:new_blogpost' title.id %}">add new blogpost</a></p>
-<ul>
 	{% for blogpost in blogposts %}
-	<li>
-		<p>{{ blogpost.date_added|date:'M d,Y H:i' }}</p>
-		<p>{{ blogpost.text|linebreaks }}</p>
-		<p>
-			<a href="{% url 'blogs:edit_blogpost' blogpost.id %}">edit blogpost</a>
-		</p>
-	</li>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3>
+				{{blogpost.date_added|date:'M d,Y H:i'}}
+				<small>
+					<a href="{% url 'blogs:edit_blogpost' blogpost.id%}">edit blogpost</a>
+				</small>
+			</h3>
+		</div>
+		<div class="panel-body">
+		{{ blogpost.text|linebreaks}}
+		</div>
+	</div><!--panel-->
 	{% empty %}
-	<li>
 		这个主题下面一无所有。。。
-	</li>
 	{% endfor %}
-</ul>
 {% endblock content %}
